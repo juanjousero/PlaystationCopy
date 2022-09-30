@@ -1,0 +1,1208 @@
+body {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Lato', 'Roboto Mono', sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        overflow-y: hidden;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main */
+
+/* PS5 grid */
+
+#playstation5 {
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    top: 25rem;
+    display: grid;
+    grid-template-areas: "ps5-text ps5"
+                         "ps5-grid ps5-grid";
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 50% 50%;
+}
+
+#ps5-description {
+    width: 80%;
+    grid-area: ps5-text;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+#ps5-description h2 {
+    font-weight: 300;
+}
+
+#ps5-description p {
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.75rem;
+}
+
+.more-info {
+    width: 12.5rem;
+    height: 3rem;
+    background-color: rgb(44, 113, 197);
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 1.25rem;
+    border: none;
+}
+
+.more-info:hover {
+    outline: thick double rgb(44, 113, 197);
+}
+
+#ps5-img {
+    grid-area: ps5;
+    width: 40rem;
+    height: auto;
+    align-self: center;
+}
+
+#ps5-grid {
+    grid-area: ps5-grid;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ps5-grid-img {
+    width: 12.5rem;
+    height: 10rem;
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.ps5-grid-img img {
+    width: 10rem;
+    height: auto;
+}
+
+.first {
+    border: 3px solid rgb(44, 113, 197);
+}
+
+.first img {
+    width: 7.5rem;
+    height: auto;
+}
+
+.second, .third, .four {
+    opacity: 0.5;
+}
+
+.first:hover, 
+.second:hover,
+.third:hover, 
+.four:hover {
+    opacity: 1;
+}
+
+.second p, .third p {
+    padding-top: 1.25rem;
+}
+
+.ps5-grid-img p {
+    width: auto;
+    height: 3rem;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+.ps5-grid-img p sup {
+    font-size: 0.5rem;
+    vertical-align: super;
+}
+
+@media only screen and (max-width: 850px) {
+    #playstation5 {
+        height: 35rem;
+        top: 22.5rem;
+    }
+    
+    #ps5-description {
+        width: 75%;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    #ps5-description p {
+        width: 100%;
+        line-height: 1.25rem;
+    }
+    
+    .more-info {
+        width: 11rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    
+    #ps5-img {
+        width: 25rem;
+        align-self: center;
+    }
+    
+    .ps5-grid-img {
+        width: 11rem;
+        height: 12rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .ps5-grid-img img {
+        width: 10rem;
+        height: auto;
+    }
+    
+    .ps5-grid-img p {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* This month games */
+
+#this-month {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 27rem;
+    display: grid;
+    grid-template-areas: "month-text blank"
+                         "month-grid month-grid";
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 40% 60%;
+    justify-items: center;                 
+}
+
+#this-month::before {
+    width: 100%;
+    height: 30rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/this-month.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#this-month-text {
+    grid-area: month-text;
+    width: 80%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: center;
+    margin-left: 20%;
+    color: white;
+    font-weight: 200;
+}
+
+#this-month-text h2 {
+    line-height: 3rem;
+}
+
+#this-month-text h4 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+}
+
+#this-month-block {
+    grid-area: month-grid;
+    width: 100%;
+    height: auto;
+    background-color: rgb(37, 38, 76);   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#this-month-grid {
+    display: grid;
+    width: 90%;
+    height: 20rem;
+    grid-template-areas: "month-grid-1 month-grid-2 month-grid-3"
+                         "month-grid-4 month-grid-5 month-grid-6";
+    grid-template-rows: 65% 35%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    color: white;                
+}
+
+#this-month-grid img {
+    width: 25rem;
+    height: auto;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.5);
+    margin-bottom: 3rem;
+    align-self: flex-end;
+}
+
+.this-month-card:hover {
+    transform: scale(1.02);
+    -webkit-box-shadow: 0px 10px 30px 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 30px 10px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 30px 10px rgba(0,0,0,0.5);
+}
+
+#this-month-grid h3 {
+    text-align: center;
+    width: 80%;
+}
+
+@media only screen and (max-width: 850px) {
+    
+    #this-month::before {
+        height: 26rem;
+        background-position: center;
+    }
+    
+    #this-month-text {
+        width: 95%;
+        height: 26rem;
+    }
+    
+    #this-month-text h4 {
+        margin-top: -3rem;
+        margin-bottom: -2rem;
+    }
+    
+    #this-month-grid {
+        width: 95%;
+        height: 20rem;            
+    }
+    
+    #this-month-grid img {
+        width: 15.5rem;
+        border-radius: 12.5px;
+        margin-bottom: 1.5rem;
+    }
+    
+    #this-month-grid h3 {
+        text-align: center;
+        width: 80%;
+        font-size: 1.25rem;
+    }
+}
+
+/* Stray div */
+
+#stray {
+    width: 100%;
+    height: 0;
+    padding-top: 37.375%;
+    position: relative;
+    top: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('../images/stray.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#stray::before {
+    content: '';
+    height: 0;
+    padding-top: 37.375%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
+}
+
+#stray-box {
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 100;
+    color: white;
+    margin-bottom: 2%;
+}
+
+.animationStrayJS {
+    animation-name: animationStray;
+    animation-duration: 2s;
+}
+
+@keyframes animationStray {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animationStrayBoxJS {
+    animation-name: animationStrayBox;
+    animation-duration: 2s;
+}
+
+@keyframes animationStrayBox {
+    0% {
+        opacity: 0;
+        margin-bottom: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #stray-box {
+        height: 32rem;
+    }
+}
+
+#stray-box img {
+    width: 30%;
+    height: auto;
+}
+
+#stray-box h4 {
+    width: 50%;
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 850px) {
+    #stray {
+        padding-top: 60.375%;
+        top: 27rem;
+        background-position: 70% 50%;
+    }
+    
+    #stray::before {
+        padding-top: 60.375%;
+    }
+    
+    #stray-box {
+        height: 22rem;
+        justify-content: space-evenly;
+    }
+
+    #stray-box h4 {
+        width: 50%;
+        font-size: 1.1rem;
+        line-height: 1.25rem;
+    }
+}
+
+/* PlayStation 4 div */
+
+#ps4 {
+    width: 100%;
+    height: 45rem;
+    position: relative;
+    top: 27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ps4 h2 {
+    padding-top: 4rem;
+    font-weight: 300;
+}
+
+#ps4 h2 span {
+    font-size: 1rem;
+    vertical-align: super;
+}
+
+#ps4 h3 {
+    font-size: 1.25rem;
+    color: rgb(89, 89, 89);
+    font-weight: 350;
+}
+
+#ps4-flex {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3.5rem;
+}
+
+.ps4-div {
+    width: 25rem;
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.ps4-div img {
+    width: 25rem;
+    height: auto;
+}
+
+.ps4-vr img {
+    height: 14rem;
+}
+
+.ps4-div h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: rgb(89, 89, 89);
+}
+
+.ps4-div .more-info {
+    width: 10.5rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.ps4-div-text {
+    width: 95%;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: start;
+}
+
+.ps4-div-text h2 {
+    padding-top: 0rem !important;
+}
+
+#playstation-plus {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    top: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("../images/playstation-plus-background.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: 20% 80%;
+}
+
+#playstation-plus-text {
+    width: 40rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+#playstation-plus-text img {
+    width: 20rem;
+    height: auto;
+}
+
+#tony-hawk-div {
+    width: 30rem;
+    height: auto;
+}
+
+#tony-hawk-div img {
+    width: 30rem;
+    height: auto;
+}
+
+.explore-button {
+    width: 15rem;
+    height: 2.5rem;
+    background-color: rgb(44, 113, 197);
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 1.15rem;
+    border: none;
+}
+
+.explore-button:hover {
+    outline: thick double rgb(44, 113, 197);
+}
+
+@media only screen and (max-width: 850px) {
+    #ps4 {
+        height: 37rem;
+        top: 28rem;
+    }
+    
+    #ps4 h2 {
+        padding-top: 3rem;
+    }
+    
+    #ps4-flex {
+        width: 90%;
+    }
+    
+    .ps4-div {
+        width: 15rem;
+        height: 21.5rem;
+        align-items: center;
+    }
+    
+    .ps4-div img {
+        width: 15rem;
+    }
+    
+    .ps4-vr img {
+        height: 10rem;
+    }
+
+    .ps4-div h2 {
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+    
+    .ps4-div h4 {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.35rem;
+    }
+    
+    .ps4-div .more-info {
+        width: 10.5rem;
+        height: 2.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .ps4-div-text {
+        width: 70%;
+        height: 11.5rem;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #playstation-plus {
+        height: 40rem;
+        top: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: none;
+        background-color: rgba(186, 184, 182);
+    }
+    
+    #playstation-plus-text {
+        width: 35rem;
+        height: 15rem;
+        align-content: flex-start;
+        margin-left: 2%;
+    }
+
+    #playstation-plus-text p {
+        width: 95%;
+        font-weight: 400;
+    }
+    
+    #playstation-plus-text img {
+        width: 23rem;
+        height: auto;
+    }
+    
+    #tony-hawk-div {
+        width: 30rem;
+        height: auto;
+        margin-right: 2%;
+    }
+    
+    #tony-hawk-div img {
+        width: 23rem;
+        height: auto;
+    }
+    
+    .explore-button {
+        width: 12.5rem;
+        height: 2rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* PlayStation Store */
+
+#playstation-store {
+    width: 100%;
+    height: 37.5rem;
+    position: relative;
+    top: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#new-sales {
+    width: 25rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#new-sales img {
+    width: 25rem;
+    height: auto;
+}
+
+#new-sales h2 {
+    margin-top: -1.75rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+
+#new-sales p {
+    padding-left: 1rem;
+    letter-spacing: 1.1px;
+    color:rgb(89, 89, 89);
+    line-height: 20px;
+}
+
+#all-sales {
+    width: 12.5rem;
+    height: 2.5rem;
+    margin-left: 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.15rem;
+    color: white;
+    background-color: rgba(197, 71, 32, 1);
+    border: none;
+}
+
+#all-sales:hover {
+    outline: thick double rgb(171, 61, 27);
+}
+
+#new-sales-img {
+    width: 54.5rem;
+    height: auto;
+}
+
+#new-sales-img a,
+#new-sales-img img {
+    width: 54.5rem;
+    height: auto;
+}
+
+#new-sales-img img {
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgb(196, 196, 196);
+}
+
+#new-sales-img img:hover {
+    transform: scale(1.01);
+}
+
+@media only screen and (max-width: 850px) {
+    #playstation-store {
+        height: 31.5rem;
+        justify-content: space-evenly;
+    }
+    
+    #new-sales {
+        width: 18rem;
+        height: 20rem;
+    }
+    
+    #new-sales img {
+        width: 18rem;
+    }
+    
+    #new-sales h2 {
+        letter-spacing: 1px;
+        font-size: 2rem;
+        padding-left: 0.5rem;
+    }
+    
+    #new-sales p {
+        padding-left: 1rem;
+        letter-spacing: 1.1px;
+        color:rgb(89, 89, 89);
+        line-height: 20px;
+    }
+    
+    #all-sales {
+        width: 11.5rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        border-radius: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    #new-sales-img {
+        width: 25.5rem;
+        height: auto;
+    }
+    
+    #new-sales-img a,
+    #new-sales-img img {
+        width: 25.5rem;
+        height: auto;
+    }
+}
+
+/* Clothes Store */
+
+#clothes-shop {
+    width: 100%;
+    height: 57rem;
+    position: relative;
+    top: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+#clothes-shop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/clothes-background.png");
+    background-size: 175%;
+    background-position: top;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+#clothes-shop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(20, 20, 20);
+    opacity: 0.5;
+}
+
+#clothes-text {
+    width: 35rem;
+    height: 15rem;
+    margin-left: 3rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#clothes-text img {
+    width: 6rem;
+    height: auto;
+}
+
+#clothes-text h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    color: white;
+    line-height: 45px;
+}
+
+#clothes-text p {
+    color:rgb(189, 189, 189);
+    line-height: 25px;
+    letter-spacing: 0.9px;
+}
+
+#clothes-grid {
+    width: 90%;
+    height: 25rem;
+    display: grid;
+    grid-template-areas: "hoodie-grid tshirt-grid cap-grid cup-grid";
+    grid-template-rows: 25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    margin-left: 4rem;
+    z-index: 2;
+}
+
+.clothes-grid {
+    width: 19rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.clothes-grid img {
+    width: 12.5rem;
+    height: auto;
+}
+
+.clothes-grid p {
+    text-align: center;
+    width: 80%;
+    line-height: 20px;
+    color: white;
+}
+
+.clothes-grid span {
+    font-size: 0.5rem;
+    vertical-align: super;
+}
+
+.buy-now {
+    width: 9rem;
+    height: 2.25rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: rgba(198, 73, 33, 1);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.buy-now:hover {
+    outline: thick double rgb(178, 64, 28);
+}
+
+#clothes-button {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#buy-collection {
+    width: 12rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: white;
+    color:rgba(0, 0, 0, 1);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#buy-collection:hover {
+    outline: thick double rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 850px) {
+    #clothes-shop {
+        height: 83rem;
+        align-content: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    #clothes-shop::before {
+        background-size: 368%;
+    }
+
+    #clothes-shop::after {
+        opacity: 0.75;
+    }
+    
+    #clothes-text img {
+        width: 5rem;
+    }
+    
+    #clothes-grid {
+        width: 90%;
+        height: 50rem;
+        grid-template-areas: "hoodie-grid tshirt-grid" 
+                             "cap-grid cup-grid";
+        grid-template-rows: 25rem 25rem;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0rem;
+        row-gap: 1.5rem;
+        margin-left: 3rem;
+    }
+    
+    .clothes-grid {
+        width: 19rem;
+        height: 25rem;
+    }
+    
+    #buy-collection {
+        height: 2rem;
+        margin-top: 1%;
+    }
+}
+
+/* Social media */
+#social-media {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    top: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(245, 247, 250, 1);
+}
+
+#social-media h2 {
+    font-weight: 300;
+}
+
+#social-media-div {
+    width: 35%;
+    height: 7.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.social-media-div,
+.social-media-div img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgba(189, 189, 189, 1);
+}
+
+.social-media-div img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+    #social-media {
+        height: 57rem;
+    }
+    
+    #social-media h2 {
+        font-size: 2rem;
+    }
+    
+    #social-media-div {
+        width: 65%;
+        height: 49.5rem;
+        margin-bottom: 0rem;
+        flex-wrap: wrap;
+    }
+    
+    .social-media-div,
+    .social-media-div img {
+        width: 15.5rem;
+        height: 15.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    top: 30rem;
+    display: grid;
+    grid-template-areas: "logo space-1 space-1 item-text"
+                         "space-2 space-2 space-2 item-text"
+                         "copyright copyright copyright space-3";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    background-color: rgba(22, 69, 150);
+    color: white;
+}
+
+#footer-logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+#footer-logo img {
+    width: 6rem;
+    height: 6rem;
+}
+
+#country {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#footer-logo #country img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#footer-logo #country p {
+    margin-left: 1rem;
+}
+
+#footer-resume {
+    grid-area: item-text;
+    width: 50rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    margin-top: 5rem;
+}
+
+#footer-resume p {
+    padding-bottom: 12px;
+    width: 27%;
+}
+
+#footer-copyright {
+    grid-area: copyright;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+}
+
+#footer-copyright img {
+    width: 9rem;
+    height: 5rem;
+}
+
+#footer-copyright p {
+    line-height: 22px;
+}
+
+@media only screen and (max-width: 850px) {
+    footer {
+        width: 100%;
+        height: 66rem;
+        position: relative;
+        top: 30rem;
+        display: grid;
+        grid-template-areas: "logo"
+                             "item-text"
+                             "copyright";
+        grid-template-rows: 6rem 20rem 8rem;
+        grid-template-columns: 1fr;
+    }
+    
+    #footer-logo {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-self: flex-start;
+        margin-left: 3rem;
+        margin-top: 0rem;
+    }
+    
+    #footer-logo img {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    #country {
+        margin-left: 10%;
+    }
+    
+    #footer-logo #country img {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #footer-logo #country p {
+        margin-left: 0.25rem;
+    }
+    
+    #footer-resume {
+        grid-area: item-text;
+        width: 100%;
+        height: 19rem;
+        margin-top: 0rem;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    
+    #footer-resume p {
+        width: 25%;
+        padding-bottom: 16px;
+        font-size: 1.1rem;
+    }
+    
+    #footer-copyright {
+        width: 90%;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+    }
+}

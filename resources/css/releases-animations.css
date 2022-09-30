@@ -1,0 +1,536 @@
+@media only screen and (min-width: 1851px) and (max-width: 2200px) {
+    .transformReleasesOddBig {
+        animation-name: nextPageReleasesOddBig;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+    .transformReleasesEvenBig {
+        animation-name: nextPageReleasesEvenBig;
+        animation-duration: 1.6s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingOddBig {
+        animation-name: nextPageUpcomingOddBig;
+        animation-duration: 1.75s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingEvenBig {
+        animation-name: nextPageUpcomingEvenBig;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformReleasesOddReverseBig {
+        animation-name: previousPageReleasesOddBig;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingOddReverseBig {
+        animation-name: previousPageUpcomingOddBig;
+        animation-duration: 2.4s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformReleasesEvenReverseBig {
+        animation-name: previousPageReleasesEvenBig;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingEvenReverseBig {
+        animation-name: previousPageUpcomingEvenBig;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media only screen and (max-width: 1850px) {
+    .transformReleasesOdd {
+        animation-name: nextPageReleasesOdd;
+        animation-duration: 1.75s;
+        animation-fill-mode: forwards;
+    }
+    
+    .transformReleasesEven {
+        animation-name: nextPageReleasesEven;
+        animation-duration: 1.3s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingOdd {
+        animation-name: nextPageUpcomingOdd;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingEven {
+        animation-name: nextPageUpcomingEven;
+        animation-duration: 1.4s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformReleasesOddReverse {
+        animation-name: previousPageReleasesOdd;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingOddReverse {
+        animation-name: previousPageUpcomingOdd;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformReleasesEvenReverse {
+        animation-name: previousPageReleasesEven;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .transformUpcomingEvenReverse {
+        animation-name: previousPageUpcomingEven;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes nextPageReleasesOdd {
+    50% {
+        margin-left: -2200px;
+        opacity: 0;
+    }
+
+    66% {
+        margin-left: 3000px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        margin-left: 2650px;
+        visibility: visible;
+        opacity: 0.5;
+    }
+}
+
+@keyframes nextPageReleasesEven {
+    0% {
+        margin-left: 2650px;
+        opacity: 0.25;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes nextPageUpcomingOdd {
+    0% {
+        margin-left: 0px;
+        opacity: 0.25;
+    }
+
+    100% {
+        margin-left: -1350px;
+    }
+}
+
+@keyframes nextPageUpcomingEven {
+    0% {
+        margin-left: -1350px;
+        opacity: 0.25;
+    }
+    
+    50% {
+        margin-left: -2500px;
+        opacity: 0;   
+    }
+
+    66% {
+        margin-left: 2500px;
+        visibility: hidden;
+    }
+
+    100% {
+        margin-left: 0px;
+        visibility: visible;
+        opacity: 0.5;
+    }
+}
+
+@keyframes previousPageReleasesOdd {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 2650px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes previousPageUpcomingOdd {
+    0% {
+        margin-left: 0px;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    20% {  
+        margin-left: 2500px;
+        visibility: hidden;
+    }
+
+    30% {
+        margin-left: -2500px;
+        opacity: 0; 
+    }
+
+    70% {
+        opacity: 0.4;
+    }
+
+    100% {
+        margin-left: -1350px;
+        opacity: 1;
+    }
+}
+
+@keyframes previousPageReleasesEven {
+    0% {
+        margin-left: 2650px;
+        visibility: visible;
+    }
+
+    25% {
+        margin-left: 3000px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    30% {
+        margin-left: -3000px;
+        opacity: 0;
+    } 
+
+    33% {
+        margin-left: -2500px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes previousPageUpcomingEven {
+    0% {
+        margin-left: -1350px;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes nextPageReleasesOddBig {
+    50% {
+        margin-left: -3200px;
+        opacity: 0;
+    }
+
+    66% {
+        margin-left: 4000px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        margin-left: 3600px;
+        visibility: visible;
+        opacity: 0.5;
+    }
+}
+
+@keyframes nextPageReleasesEvenBig {
+    0% {
+        margin-left: 3600px;
+        opacity: 0.25;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes nextPageUpcomingOddBig {
+    0% {
+        margin-left: 0px;
+        opacity: 0.25;
+    }
+
+    100% {
+        margin-left: -1800px;
+    }
+}
+
+@keyframes nextPageUpcomingEvenBig {
+    0% {
+        margin-left: -2350px;
+        opacity: 0.25;
+    }
+    
+    65% {
+        margin-left: -3500px;
+        opacity: 0;   
+    }
+
+    66% {
+        margin-left: 3500px;
+        visibility: hidden;
+    }
+
+    100% {
+        margin-left: 0px;
+        visibility: visible;
+        opacity: 0.5;
+    }
+}
+
+@keyframes previousPageReleasesOddBig {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 3550px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes previousPageUpcomingOddBig {
+    0% {
+        margin-left: 0px;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    20% {  
+        margin-left: 2500px;
+        visibility: hidden;
+    }
+
+    30% {
+        margin-left: -4200px;
+        opacity: 0; 
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        margin-left: -1800px;
+        opacity: 1;
+    }
+}
+
+@keyframes previousPageReleasesEvenBig {
+    0% {
+        margin-left: 3550px;
+        visibility: visible;
+    }
+
+    25% {
+        margin-left: 4200px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    30% {
+        margin-left: -3000px;
+        opacity: 0;
+    } 
+
+    33% {
+        margin-left: -2500px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes previousPageUpcomingEvenBig {
+    0% {
+        margin-left: -1800px;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    @keyframes nextPageReleasesOdd {
+        50% {
+            margin-left: -1600px;
+            opacity: 0;
+        }
+    
+        66% {
+            margin-left: 1800px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        100% {
+            margin-left: 1500px;
+            visibility: visible;
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes nextPageReleasesEven {
+        0% {
+            margin-left: 1500px;
+            opacity: 0.25;
+        }
+    
+        100% {
+            margin-left: 0px;
+        }
+    }
+    
+    @keyframes nextPageUpcomingOdd {
+        0% {
+            margin-left: 0px;
+            opacity: 0.25;
+        }
+    
+        100% {
+            margin-left: -750px;
+        }
+    }
+    
+    @keyframes nextPageUpcomingEven {
+        0% {
+            margin-left: -750px;
+            opacity: 0.25;
+        }
+        
+        50% {
+            margin-left: -1400px;
+            opacity: 0;   
+        }
+    
+        66% {
+            margin-left: 500px;
+            visibility: hidden;
+        }
+    
+        100% {
+            margin-left: 0px;
+            visibility: visible;
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes previousPageReleasesOdd {
+        0% {
+            margin-left: 0px;
+        }
+    
+        100% {
+            margin-left: 1500px;
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes previousPageUpcomingOdd {
+        0% {
+            margin-left: 0px;
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        20% {  
+            margin-left: 500px;
+            visibility: hidden;
+        }
+    
+        30% {
+            margin-left: -1400px;
+            opacity: 0; 
+        }
+    
+        70% {
+            opacity: 0.4;
+        }
+    
+        100% {
+            margin-left: -750px;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes previousPageReleasesEven {
+        0% {
+            margin-left: 1500px;
+            visibility: visible;
+        }
+    
+        25% {
+            margin-left: 2000px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        30% {
+            margin-left: -2000px;
+            opacity: 0;
+        } 
+    
+        33% {
+            margin-left: -1500px;
+            opacity: 0;
+        }
+    
+        75% {
+            opacity: 0.3;
+        }
+    
+        100% {
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes previousPageUpcomingEven {
+        0% {
+            margin-left: -750px;
+        }
+    
+        100% {
+            margin-left: 0px;
+            opacity: 0.5;
+        }
+    }
+}

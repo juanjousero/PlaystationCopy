@@ -1,0 +1,327 @@
+/* Releases and Upcoming */
+
+#releases-upcoming {
+    width: 100%;
+    height: 45rem;
+    position: relative;
+    top: 27rem;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: rgba(0,0,0,1);
+    color: white;
+}
+
+#new-releases {
+    width: 100%;
+    height: 42rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#new-releases p,
+#upcoming p {
+    font-size: 1.25rem;
+}
+
+#releases-text,
+#upcoming-text {
+    font-weight: 400;
+}
+
+#releases-text {
+    width: 90%;
+}
+
+#new-releases p {
+    width: 90%;
+}
+
+#releases-grid, #upcoming-grid {
+    width: 90%;
+    height: 30rem;
+    display: grid;
+    grid-template-areas: "first-grid second-grid third-grid fourth-grid fith-grid sixth-grid"
+                         "seventh-grid eighth-grid nineth-grid tenth-grid eleventh-grid twelfth-grid";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1.5rem;
+    column-gap: 1.75rem;
+}
+
+.release-grid {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-self: center;
+}
+
+.first-row p,
+.second-row p {
+    width: 12rem !important;
+    position: absolute;
+    font-size: 0.95rem !important;
+}
+
+.first-row p {
+    top: 22rem;
+}
+
+.second-row p {
+    top: 38rem;
+}
+
+.release-grid img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 1rem;
+}
+
+.release-grid img:hover {
+    transform: scale(1.02);
+}
+
+.release-grid span {
+    vertical-align: super;
+    font-size: 0.5rem;
+}
+
+.quarry {
+    grid-area: first-grid;
+}
+
+.stray {
+    grid-area: second-grid;
+}
+
+.horizon {
+    grid-area: third-grid;
+}
+
+.elden {
+    grid-area: fourth-grid;
+} 
+
+.uncharted {
+    grid-area: fith-grid;
+}
+
+.tiny {
+    grid-area: sixth-grid;
+}
+
+.sifu {
+    grid-area: seventh-grid;
+}
+
+.dying {
+    grid-area: eighth-grid;
+}
+
+.lego {
+    grid-area: nineth-grid;
+}
+
+.ghostwire {
+    grid-area: tenth-grid;
+}
+
+.granturismo {
+    grid-area: eleventh-grid;
+}
+
+.deathloop {
+    grid-area: twelfth-grid;
+}
+
+#backwards-button, 
+#forwards-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    border: none;
+    z-index: 99;
+}
+
+#backwards-button:hover, 
+#forwards-button:hover {
+    outline: thick double rgba(255, 255, 255, 1);
+}
+
+#backwards-button {
+    position: absolute;
+    top: 2rem;
+    right: 8rem;
+}
+
+#forwards-button {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+}
+
+.button-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 0.15rem;
+}
+
+#upcoming {
+    width: 100%;
+    height: 42rem;
+    position: absolute;
+    top: 0;
+    left: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;                 
+}
+
+.hogwarts {
+    grid-area: first-grid;
+}
+
+.fifa {
+    grid-area: second-grid;
+}
+
+.callisto {
+    grid-area: third-grid;
+}
+
+.madden {
+    grid-area: fourth-grid;
+} 
+
+.madden img {
+    object-fit: cover;
+}
+
+.saints {
+    grid-area: fith-grid;
+}
+
+.gotham {
+    grid-area: sixth-grid;
+}
+
+.forspoken {
+    grid-area: seventh-grid;
+}
+
+.call {
+    grid-area: eighth-grid;
+}
+
+.devil {
+    grid-area: nineth-grid;
+}
+
+.god {
+    grid-area: tenth-grid;
+}
+
+.suicide {
+    grid-area: eleventh-grid;
+}
+
+.last {
+    grid-area: twelfth-grid;
+}
+
+.god img, .last img {
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 850px) {
+    #releases-upcoming {
+        height: 45rem;
+        top: 27rem;
+    }
+    
+    #new-releases {
+        height: 42rem;
+    }
+    
+    #new-releases p,
+    #upcoming p {
+        font-size: 1.1rem;
+    }
+    
+    #releases-grid, #upcoming-grid {
+        width: 90%;
+        height: 34rem;
+        grid-template-areas: "first-grid second-grid third-grid fourth-grid"
+                             "fith-grid sixth-grid seventh-grid eighth-grid"
+                             "nineth-grid tenth-grid eleventh-grid twelfth-grid";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 1.25rem;
+        column-gap: 1rem;
+    }
+    
+    .release-grid {
+        width: 9rem;
+        height: 11rem;
+    }
+    
+    .first-row p,
+    .second-row p {
+        width: 10rem !important;
+        position: absolute;
+        font-size: 0.9rem !important;
+    }
+
+    .quarry p, .stray p, .horizon p,
+    .elden p, .hogwarts p, .fifa p,
+    .callisto p, .madden p {
+        top: 16rem;
+    } 
+
+    .uncharted p, .tiny p, .sifu p, .dying p,
+    .saints p, .gotham p, .forspoken p, .call p {
+        top: 28rem;
+    }
+
+    .lego p, .ghostwire p, .granturismo p, .deathloop p,
+    .devil p, .god p, .suicide p, .last p {
+        top: 40.5rem;
+    }
+    
+    .release-grid img {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 0.5rem;
+    }
+    
+    #backwards-button, 
+    #forwards-button {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    #backwards-button {
+        top: 1.5rem;
+    }
+    
+    #forwards-button {
+        top: 1.5rem;
+    }
+    
+    #upcoming {
+        height: 42rem;
+    }
+}

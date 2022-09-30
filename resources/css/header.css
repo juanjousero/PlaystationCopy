@@ -1,0 +1,467 @@
+/* Header */
+
+#sony-nav {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 99;
+}
+
+#sony-nav img {
+    width: auto;
+    height: 3.5rem;
+    padding-right: 2rem;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    position: sticky;
+    margin-top: 2rem;
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 999;
+}
+
+#menu {
+    width: 35rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 400;
+}
+
+#menu img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+}
+
+#menu a {
+    width: 12rem;
+    height: auto;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: start;
+}
+
+#menu a:hover p {
+    color: rgba(8, 101, 200, 1) !important;
+}
+
+.down-arrow {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 0.25rem;
+    clip-path: polygon(50% 70%, 90% 30%, 100% 35%, 100% 45%, 55% 90%, 45% 90%, 0 45%, 0% 35%, 10% 30%);
+    background-color: rgb(89, 89, 89);
+}
+
+#menu a:hover .down-arrow {
+    background-color: rgba(8, 101, 200, 1);
+}
+
+#session-search {
+    width: 15rem;
+    height: auto;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#new-session {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    background-color: rgb(89, 89, 89);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#search {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Javascript classes for Header div */
+
+.headerDivExpanded, .headerDivExpandedAsistance {
+    width: 100%;
+    position: absolute;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.headerDivExpanded {
+    height: 20rem;
+}
+
+.headerDivExpandedAnimation {
+    animation-name: headerExpansion;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.headerDivExpandedAsistance {
+    height: 12.5rem;
+}
+
+.headerDivExpandedAsistanceAnimation {
+    animation-name: headerExpansionAsistance;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headerExpansion {
+    0% {
+        height: 4rem;
+    }
+
+    100% {
+        height: 20rem;
+    }
+}
+
+@keyframes headerExpansionAsistance {
+    0% {
+        height: 4rem;
+    }
+
+    100% {
+        height: 12.5rem;
+    }
+}
+
+.headerGames {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.75);
+}
+
+.headerGamesAnimation {
+    animation-name: headerGamesExpansion;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.headerGamesAnimationShort {
+    animation-name: headerGamesExpansion;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headerGamesExpansion {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.headerGamesCard {
+    width: 12rem;
+    height: 10rem;
+}
+
+.headerShopCard {
+    width: 14rem;
+    height: 10rem;
+}
+
+.headerGamesCard, .headerShopCard {
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    border-radius: 5px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.headerGamesCard:hover, .headerShopCard:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.headerGamesCardPS5 {
+    background-image: url('../images/JS/PS5.png');
+}
+
+.headerGamesCardPS4 {
+    background-image: url('../images/JS/PS4.png');
+}
+
+.headerGamesCardVR {
+    background-image: url('../images/JS/VR.png');
+}
+
+.headerGamesCardPLUS {
+    background-image: url('../images/JS/PSPLUS.png');
+}
+
+.headerGamesCardSTORE {
+    background-image: url('../images/JS/STORE.png');
+    background-size: 75%;
+}
+
+.headerHardwareCardPS4Pro {
+    background-image: url('../images/JS/PS4Pro.png');
+    background-size: 78%;
+}
+
+.headerServicesCardSTARS {
+    background-image: url('../images/JS/PSStars.png');
+    background-size: 72%;
+}
+
+.headerNewsCardBlog {
+    background-image: url('../images/JS/Blog.png');
+    background-size: 85%;
+}
+
+.headerNewsCardCalendar {
+    background-image: url('../images/JS/Calendar.png');
+    background-size: 85%;
+}
+
+.headerShopCardGames {
+    background-image: url('../images/JS/Games.png');
+    background-size: 100%;
+}
+
+.headerShopCardGear {
+    background-image: url('../images/JS/Gear.png');
+    background-size: 100%;
+}
+
+.headerAsistanceCardAsistance {
+    background-image: url('../images/JS/Asistance.png');
+    background-size: 85%;
+}
+
+.headerAsistanceCardPSN {
+    background-image: url('../images/JS/PSN.png');
+    background-size: 85%;
+}
+
+.gamesHeaderList {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamesHeaderListAnimation {
+    animation-name: headerGamesExpansion;
+    animation-duration: 1.9s;
+    animation-fill-mode: forwards;
+}
+
+.gamesHeaderListAnimationShort {
+    animation-name: headerGamesExpansion;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.gamesHeaderList li {
+    font-size: 1.1rem;
+    list-style: none;
+    margin-right: 3%;
+}
+
+.gamesHeaderList li:hover {
+    color: rgba(8, 101, 200, 1);
+    cursor: pointer;
+}
+
+.gamesHeaderList li::before {
+    content: '\2022';
+    color: rgba(8, 101, 200, 1);
+    padding-right: 10px;
+}
+
+.spiningArrow {
+    animation-name: spining;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spining {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* Responsive para tablets */
+
+@media only screen and (max-width: 850px) {
+    
+    #sony-nav img {
+        height: 4.5rem;
+    }
+    
+    #menu {
+        width: 30rem;
+        margin-left: 2rem;
+    }
+    
+    #menu a {
+        width: 11rem;
+        font-size: 0.9rem;
+    }
+    
+    .down-arrow {
+        width: 0.65rem;
+        height: 0.65rem;
+    }
+    
+    #session-search {
+        width: 10rem;
+        margin-right: 2%;
+    }
+    
+    #new-session {
+        width: 7rem;
+        height: 1.35rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        background-color: rgba(8, 101, 200, 1);
+    }
+    
+    #search {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /* Javascript classes for Header div */
+
+    @keyframes headerExpansion {
+        0% {
+            height: 4rem;
+        }
+
+        100% {
+            height: 17.5rem;
+        }
+    }
+
+    @keyframes headerExpansionAsistance {
+        0% {
+            height: 4rem;
+        }
+
+        100% {
+            height: 10rem;
+        }
+    }
+
+    .headerGamesCard {
+        width: 9rem;
+        height: 7rem;
+    }
+
+    .headerShopCard {
+        width: 11rem;
+        height: 7rem;
+    }
+
+    .headerGamesCard, .headerShopCard {
+        margin-right: 0.15rem;
+        margin-left: 0.15rem;
+    }
+
+    .gamesHeaderList {
+        top: 1rem;
+    }
+
+    .gamesHeaderList li {
+        font-size: 0.8rem;
+        margin-left: 1.75%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gamesHeaderList li::before {
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #sony-nav img {
+        height: 4.5rem;
+    }
+    
+    #menu {
+        width: 30rem;
+        margin-left: 2rem;
+    }
+    
+    #menu a {
+        width: 11rem;
+        font-size: 0.9rem;
+    }
+
+    #menu a p, #menu a div {
+        display: hidden;
+    }
+    
+    .down-arrow {
+        width: 0.65rem;
+        height: 0.65rem;
+    }
+    
+    #session-search {
+        width: 10rem;
+        margin-right: 2%;
+    }
+    
+    #new-session {
+        width: 7rem;
+        height: 1.35rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        background-color: rgba(8, 101, 200, 1);
+    }
+    
+    #search {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
